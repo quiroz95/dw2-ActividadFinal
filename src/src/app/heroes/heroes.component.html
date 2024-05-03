@@ -1,0 +1,52 @@
+<!--<"Actualicé los enlaces de las plantillas para anunciar el nombre del héroe, ahora muestran tanto el ID como el nombre."-->
+<!--<h2>Detalle: {{hero.name | uppercase}}</h2> "aqui se modifico el titulo a DETALLE en español"
+<div><span>Id: </span>{{hero.id}}</div>
+<div>
+  <label>Nombre:
+    <input [(ngModel)]="hero.name" placeholder="Nombre"/>
+  </label>
+</div>-->
+
+<!--<h2>Mis Heroes</h2>
+<ul class="heroes">
+  //Bucle para la listar array
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedHero">
+//Formulario para editar  un elemento
+  <h2>Detalles {{selectedHero.name | uppercase}}</h2>
+  <div><span>Id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="selectedHero.name" placeholder="Nombre"/>
+    </label>
+  </div>
+
+</div>-->
+
+<!--Actualizamos y los cambios agregados son los botones-->
+
+<!--<h2>Mis Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
+
+<h2>Mis Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
